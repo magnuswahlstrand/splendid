@@ -1,7 +1,6 @@
 package font
 
 import (
-	"fmt"
 	"image/color"
 	"log"
 
@@ -66,8 +65,6 @@ func drawInCenter(screen *ebiten.Image, s string, r gfx.Rect, fnt font.Face, clr
 
 	x := int(r.Min.X + offsetX)
 	y := int(r.Min.Y + offsetY + bb.H())
-	fmt.Println(offsetX, offsetY)
-	fmt.Println(x, y)
 
 	text.Draw(screen, s, fnt, x, y, clr)
 	// ebitendrawutil.DrawRect(screen, r, colornames.Green, 2)

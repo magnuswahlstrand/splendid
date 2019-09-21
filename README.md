@@ -1,5 +1,12 @@
 # Splendid
 
+## User feedback
+
+- [ ] Start button on start screen
+- [ ] Highscore button on start screen
+- [x] Add delay after game finish before continuing is possible
+- [x] Lower time from 60s
+
 ## Todo
 
 - [ ] **Highscore server**
@@ -20,6 +27,12 @@
   - [ ] Pause button
 - [ ] **Android** - Settings
   - [ ] Disable vibration
+- [ ] **Slack notifiations**
+  - [ ] Deployment to Heroku
+  - [ ] User downloaded app
+  - [ ] User started app
+  - [ ] New score posted
+  - [ ] New highscore set
 
 ## Lessons learnt
 

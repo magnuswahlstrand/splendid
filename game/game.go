@@ -19,7 +19,7 @@ type Game struct {
 	state       gameState
 	score       int
 	cardHint    string
-	endTime     time.Time
+	startTime   time.Time
 	correctCard *card.Card
 	board       card.Board
 	Vibrator    func()
@@ -39,12 +39,12 @@ func New() *Game {
 func (g *Game) Restart() {
 	g.state = running
 	g.score = 0
-	g.board.NewRound(4)
-	g.endTime = time.Now().Add(1 * time.Second)
+	g.board.NewRound(CardsOnBoard)
+	g.startTime = time.Now()
 }
 
 func (g *Game) TimeRemaining() time.Duration {
-	return g.endTime.Sub(time.Now())
+	return g.startTime.Add(GameDuration * time.Second).Sub(time.Now())
 }
 
 func (g *Game) Layout(viewWidth, viewHeight int) (screenWidth, screenHeight int) {
