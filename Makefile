@@ -4,4 +4,4 @@ assets :
 
 .PHONY: mobile
 mobile :
-	env GO111MODULE=off ebitenmobile bind -target android -javapkg cafe.gophers.ebitengame -o ~/Desktop/splendidmobile.aar github.com/kyeett/splendid/splendidmobile
+	env GO111MODULE=off ebitenmobile bind -target android -javapkg cafe.gophers.ebitengame -o ~/AndroidStudioProjects/ebitengame/app/libs/splendidmobile.aar github.com/kyeett/splendid/splendidmobile

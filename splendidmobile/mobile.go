@@ -12,14 +12,12 @@ import (
 var g *game.Game
 
 func init() {
-	g = game.New()
+	g = game.New(true)
 	mobile.SetGame(g)
 }
 
-func UpdateVibrateDevice(vd VibrateDevice) {
-	g.Vibrator = func() {
-		vd.Vibrate()
-	}
+func SetMobileConnector(mc GameMobileInterface) {
+	g.SetMobileConnector(mc)
 }
 
 // Dummy is a dummy exported function.
@@ -28,24 +26,24 @@ func UpdateVibrateDevice(vd VibrateDevice) {
 // Dummy forces gomobile to compile this package.
 func Dummy() {}
 
-type Counter struct {
-	Value int
-}
+// type Counter struct {
+// 	Value int
+// }
 
-func (c *Counter) Inc() { c.Value++ }
+// func (c *Counter) Inc() { c.Value++ }
 
-func NewCounter() *Counter { return &Counter{5} }
+// func NewCounter() *Counter { return &Counter{5} }
 
-type Printer interface {
-	Print(s string)
-}
+// type Printer interface {
+// 	Print(s string)
+// }
 
-func PrintHello(p Printer) {
-	p.Print("Hello, World!")
-}
+// func PrintHello(p Printer) {
+// 	p.Print("Hello, World!")
+// }
 
-var vibrator VibrateDevice
-
-type VibrateDevice interface {
+type GameMobileInterface interface {
 	Vibrate()
+	ShowEndDialog()
+	GetDeviceID() string
 }

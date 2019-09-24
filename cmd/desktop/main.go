@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-	g := game.New()
+	g := game.New(false)
 	if err := ebiten.Run(g.Update, game.Size.Width, game.Size.Height, 1, "my application"); err != nil {
 		log.Fatal(err)
 	}
