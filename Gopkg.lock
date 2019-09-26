@@ -86,11 +86,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:b2b628f0a85c926a579b8ce54270f092fd7b2b50dcf1a00c4e0484c5a2ef3511"
-  name = "github.com/kyeett/ebitendrawutil"
-  packages = ["."]
+  digest = "1:a44983c28a3aefa744b8091b1d4c0658fa45536b9be045eacc6ee867f54c2321"
+  name = "github.com/kyeett/highscore-server"
+  packages = [
+    "client",
+    "model",
+  ]
   pruneopts = "UT"
-  revision = "7ad7d5420ec51b98621de22e5b52da137f039162"
+  revision = "ccb4cadc6e82408339367ed22a4ecdd0e4600b07"
 
 [[projects]]
   branch = "master"
@@ -190,7 +193,6 @@
     "github.com/hajimehoshi/ebiten/inpututil",
     "github.com/hajimehoshi/ebiten/mobile",
     "github.com/hajimehoshi/ebiten/text",
-    "github.com/kyeett/ebitendrawutil",
     "github.com/kyeett/highscore-server/client",
     "github.com/kyeett/highscore-server/model",
     "github.com/peterhellberg/gfx",
