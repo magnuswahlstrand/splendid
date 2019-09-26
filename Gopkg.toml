@@ -25,13 +25,15 @@
 #   unused-packages = true
 
 
+ignored = ["github.com/hajimehoshi/ebiten"]
+
 [[constraint]]
   branch = "master"
   name = "github.com/golang/freetype"
 
-[[constraint]]
-  name = "github.com/hajimehoshi/ebiten"
-  version = "1.9.3"
+# [[constraint]]
+#   name = "github.com/hajimehoshi/ebiten"
+#   version = "1.9.3"
 
 [[constraint]]
   branch = "master"
